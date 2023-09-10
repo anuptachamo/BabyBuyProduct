@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registerbg"
+    android:foregroundTint="#00504848"
+    android:id="@+id/constraintLayout"
+    tools:context="com.example.babybuy.Activity.RegisterActivity">
+
+<!--    Main Title-->
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
+        android:layout_marginTop="275sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
+<!--    Firstname-->
+    <EditText
+        android:id="@+id/smobile"
+        android:layout_width="148dp"
+        android:layout_height="44dp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="55dp"
+        android:autofillHints=""
+
+        android:background="@drawable/btn_shape"
+        android:drawableLeft="@drawable/fullname_vector"
+        android:drawablePadding="10dp"
+        android:ems="8"
+
+        android:hint="First name"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+
+
+        android:paddingBottom="10dp"
+
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+<!--    Lastname-->
+    <EditText
+        android:id="@+id/stitle"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+
+        android:layout_marginTop="54dp"
+        android:background="@drawable/btn_shape"
+        android:drawableLeft="@drawable/fullname_vector"
+
+        android:drawablePadding="10dp"
+        android:ems="8"
+        android:hint="Last name"
+        android:paddingLeft="10dp"
+
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+
+        android:textColorHint="#808080"
+        android:inputType="text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toStartOf="@+id/smobile"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+<!--    Email-->
+    <EditText
+        android:id="@+id/sdescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Email"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+
+        app:layout_constraintStart_toStartOf="@+id/smobile"
+        app:layout_constraintEnd_toEndOf="@id/stitle"
+        app:layout_constraintTop_toBottomOf="@+id/smobile"
+
+        android:background="@drawable/btn_shape"
+
+        android:drawableLeft="@drawable/remail_vector"
+        android:drawablePadding="10dp"
+
+        android:layout_marginTop="20dp"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp" />
+
+<!--    Password-->
+    <EditText
+        android:id="@+id/squnatity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Password"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:inputType="textPassword"
+
+        app:layout_constraintStart_toStartOf="@+id/sdescription"
+        app:layout_constraintEnd_toEndOf="@+id/sdescription"
+        app:layout_constraintTop_toBottomOf="@+id/sdescription"
+
+        android:background="@drawable/btn_shape"
+
+        android:drawableLeft="@drawable/passwordr_vector"
+        android:drawablePadding="10dp"
+
+        android:layout_marginTop="20dp"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+         />
+
+<!--    Confirm Password-->
+    <EditText
+        android:id="@+id/sprice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Confirm password"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:inputType="textPassword"
+
+        app:layout_constraintStart_toStartOf="@+id/squnatity"
+        app:layout_constraintEnd_toEndOf="@+id/squnatity"
+        app:layout_constraintTop_toBottomOf="@+id/squnatity"
+
+        android:background="@drawable/btn_shape"
+        android:ems="14"
+
+        android:drawableLeft="@drawable/passwordr_vector"
+        android:drawablePadding="10dp"
+
+        android:layout_marginTop="20dp"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp" />
+
+<!--    Check Box(Texts and condition)-->
+    <CheckBox
+        android:id="@+id/Term_Condition_checkbox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20sp"
+        android:text="Agree Terms and Condition"
+
+        android:textColor="@color/purple"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprice" />
+
+<!--    Register Button-->
+    <Button
+        android:id="@+id/btnsendsms"
+        android:layout_width="0dp"
+        android:fontFamily="sans-serif"
+        android:layout_height="70sp"
+        android:layout_marginTop="30dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Term_Condition_checkbox"
+
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple"
+        app:cornerRadius="20sp"
+
+        android:layout_marginStart="150sp"
+        android:layout_marginEnd="150sp"/>
+
+<!--    Text-->
+    <TextView
+        android:id="@+id/ahaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="@color/white"
+        android:text="Already a user? "
+        android:layout_marginStart="70sp"
+        android:textColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsendsms" />
+
+<!--    Text-->
+    <TextView
+        android:id="@+id/rsingup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:shadowColor="@color/colorRed"
+        android:text="Login Now"
+        android:gravity="center"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toEndOf="@+id/ahaa"
+        app:layout_constraintTop_toBottomOf="@+id/btnsendsms"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

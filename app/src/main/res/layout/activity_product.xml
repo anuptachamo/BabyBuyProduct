@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.ProductListActivity">
+
+<!--top-toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        Back Button-->
+        <ImageButton
+            android:id="@+id/backtocategory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/ic_arrow_back"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+<!--Title-->
+    <TextView
+        android:id="@+id/productshowname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Product"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/purple"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
+
+        android:paddingStart="10sp"
+        android:paddingBottom="10sp"
+        android:paddingEnd="10sp"
+        android:paddingTop="10sp"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/productaddbtntool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="60sp">
+
+<!--        Add new Product button-->
+        <Button
+            android:id="@+id/productactivityaddbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/purple"
+            android:layout_marginBottom="10sp"
+            app:cornerRadius="20sp"
+            android:drawableLeft="@drawable/ic_add"
+            android:text="Add New Product"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/productprice"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/purple"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productaddbtntool">
+
+<!--        text(Purchased)-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="15sp"
+            android:drawableLeft="@drawable/shopping_price"
+            android:drawablePadding="5sp"
+            android:text="Purchased  :"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+<!--        Text-->
+        <TextView
+            android:id="@+id/totalpurchasedprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="25sp"
+            android:paddingStart="1sp"
+            android:text="1234"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+<!--        Text(ToBuy)-->
+        <TextView
+            android:id="@+id/totaltobuyprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="25sp"
+            android:layout_marginEnd="20sp"
+            android:text="1234"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+<!--        text-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp"
+            android:layout_marginEnd="20sp"
+            android:drawableLeft="@drawable/tobuy_vector"
+            android:drawablePadding="5sp"
+            android:text="ToBuy  :"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    RecyclerView(List of all product)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="145dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/productprice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_recy_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="10sp"
+            android:paddingTop="10sp"
+            android:paddingEnd="10sp"
+            android:paddingBottom="10sp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

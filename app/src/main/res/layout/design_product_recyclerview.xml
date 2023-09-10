@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    cardview:cardCornerRadius="10dp">
+
+<!--Linear Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Image-->
+        <ImageView
+            android:id="@+id/product_img_id"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bgimage"
+            android:scaleType="centerCrop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple">
+
+<!--            Product name-->
+            <TextView
+                android:id="@+id/product_title_id"
+                android:layout_width="204dp"
+                android:layout_height="36dp"
+                android:gravity="left"
+                android:paddingStart="20sp"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                cardview:layout_constraintStart_toStartOf="parent"
+                cardview:layout_constraintTop_toTopOf="parent" />
+
+<!--            Product Quantity-->
+            <TextView
+                android:id="@+id/product_quantity_id"
+                android:layout_width="124dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:paddingStart="35sp"
+                android:text="Quantity"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                cardview:layout_constraintStart_toStartOf="parent"
+                cardview:layout_constraintTop_toBottomOf="@+id/product_des_id" />
+
+<!--            Product Description-->
+            <TextView
+                android:id="@+id/product_des_id"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:gravity="left"
+                android:inputType="textMultiLine"
+                android:paddingStart="35sp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                cardview:layout_constraintStart_toStartOf="parent"
+                cardview:layout_constraintTop_toBottomOf="@+id/product_title_id" />
+
+<!--            Product Price-->
+            <TextView
+                android:id="@+id/product_price_id"
+                android:layout_width="92dp"
+                android:layout_height="25dp"
+                android:gravity="left|bottom"
+                android:paddingStart="40sp"
+
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                cardview:layout_constraintBottom_toBottomOf="parent"
+                cardview:layout_constraintStart_toStartOf="parent" />
+
+<!--            Check box for purchasing product-->
+            <CheckBox
+                android:id="@+id/productpurchased"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:buttonTint="@color/white"
+                android:scaleX="1.70"
+                android:scaleY="1.70"
+                cardview:layout_constraintEnd_toEndOf="parent"
+                cardview:layout_constraintTop_toTopOf="parent" />
+
+<!--            Update product-->
+            <ImageView
+                android:id="@+id/productlistedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_edit"
+                android:backgroundTint="@color/white"
+                cardview:layout_constraintBottom_toBottomOf="parent"
+                cardview:layout_constraintEnd_toStartOf="@+id/productlistdelete" />
+
+<!--            Delete Product-->
+            <ImageView
+                android:id="@+id/productlistdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_delete"
+                android:backgroundTint="@color/white"
+                cardview:layout_constraintBottom_toBottomOf="parent"
+                cardview:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

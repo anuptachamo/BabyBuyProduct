@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Home Items    -->
+    <item android:title="Home">
+        <menu>
+<!--            Manage Category-->
+            <item
+                android:id="@+id/mcategory"
+                android:icon="@drawable/category_icon"
+                android:title="Manage Category"/>
+
+<!--            Manage Product-->
+            <item
+                android:id="@+id/mproduct"
+                android:icon="@drawable/product_icon"
+                android:title="Manage Product" />
+        </menu>
+    </item>
+
+<!--    User Setting items-->
+    <item android:title="User Setting">
+        <menu>
+<!--            User Profile-->
+            <item
+                android:id="@+id/mmuser"
+                android:icon="@drawable/profile_icon"
+                android:title="User Profile" />
+
+<!--            Send SMS-->
+            <item
+                android:id="@+id/msendsms"
+                android:icon="@drawable/icon_sms"
+                android:title="Send SMS" />
+
+<!--            Size Chart-->
+            <item
+                android:id="@+id/msizechart"
+                android:icon="@drawable/chart_icon"
+                android:title="Size Chart" />
+        </menu>
+    </item>
+
+<!--    Logout Items-->
+    <item android:title="Logout">
+        <menu>
+<!--            Logout-->
+            <item
+                android:id="@+id/mlogout"
+                android:icon="@drawable/logout_icon"
+                android:title="Logout"/>
+        </menu>
+    </item>
+</menu>

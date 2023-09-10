@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    tools:context=".Activity.StartingActivity">
+
+<!--    Main Title-->
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:text="Baby Buy"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+
+        app:layout_constraintVertical_bias="0.13"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+<!--    Text-->
+    <TextView
+        android:id="@+id/text1_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:text="With every newborn"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+
+        android:layout_marginTop="500dp" />
+
+<!--    Text-->
+    <TextView
+        android:id="@+id/text2_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:text="baby,a little sun rises."
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1_main" />
+
+<!--    CLick here and indirect to LOGIN page-->
+    <Button
+        android:id="@+id/btn_getStarted"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text2_main"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+
+        android:text="Get Started"
+        android:textColor="@color/purple"
+        android:backgroundTint="@color/white"
+        android:textSize="18dp"
+        app:cornerRadius="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
